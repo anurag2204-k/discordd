@@ -81,6 +81,7 @@ export function ServerHeader({ server, role }: ServerHeaderProps) {
         {isModerator && <DropdownMenuSeparator />}
         {isAdmin && (
           <DropdownMenuItem
+            onClick={()=>onOpen("deleteServer",{server})}
             className="px-3 py-2 text-sm cursor-pointer text-rose-500"
           >
             Delete Server
@@ -89,6 +90,7 @@ export function ServerHeader({ server, role }: ServerHeaderProps) {
         )}
         {!isAdmin && (
           <DropdownMenuItem
+            onClick={()=>onOpen("leaveServer",{server})}
             className="px-3 py-2 text-sm cursor-pointer text-rose-500"
           >
             Leave Server
