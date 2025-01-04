@@ -1,13 +1,13 @@
 import React from "react";
-import { RedirectToSignIn  } from "@clerk/nextjs";
+import { RedirectToSignIn } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 import { ChannelType } from "@prisma/client";
 
 import { currentProfile } from "@/lib/current-profile";
 import { db } from "@/lib/db";
 import { ChatHeader } from "@/components/chat/chat-header";
-// import { ChatInput } from "@/components/chat/chat-input";
-// import { ChatMessages } from "@/components/chat/chat-messages";
+import { ChatInput } from "@/components/chat/chat-input";
+import { ChatMessages } from "@/components/chat/chat-messages";
 // import { MediaRoom } from "@/components/media-room";
 
 interface ChannelIdPageProps {
@@ -22,7 +22,7 @@ export default async function ChannelIdPage({
 }: ChannelIdPageProps) {
   const profile = await currentProfile();
 
-  if (!profile) return <RedirectToSignIn/>;
+  if (!profile) return <RedirectToSignIn />;
 
   const channel = await db.channel.findUnique({
     where: { id: channelId }
@@ -41,7 +41,7 @@ export default async function ChannelIdPage({
         serverId={channel.serverId}
         type="channel"
       />
-      {/* {channel.type === ChannelType.TEXT && (
+      {channel.type === ChannelType.TEXT && (
         <>
           <ChatMessages
             member={member}
@@ -67,7 +67,7 @@ export default async function ChannelIdPage({
             }}
           />
         </>
-      )} */}
+      )}
       {/* {channel.type === ChannelType.AUDIO && (
         <MediaRoom chatId={channel.id} video={false} audio={true} />
       )}
