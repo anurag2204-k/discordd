@@ -1,4 +1,5 @@
-// app/api/livekit/route.ts
+export const dynamic = 'force-dynamic';
+
 import { AccessToken } from "livekit-server-sdk";
 import { NextRequest, NextResponse } from "next/server";
 
