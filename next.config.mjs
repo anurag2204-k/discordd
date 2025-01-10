@@ -15,7 +15,8 @@ const nextConfig = {
                 pathname: '/**',
             }
         ]
-    }
+    },
+    productionBrowserSourceMaps: false, // Enable source maps
 };
 
 export default nextConfig;
