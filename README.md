@@ -1,6 +1,8 @@
 # Discord Clone: Discordd
 
 Credits: [Antonio Erdeljac](https://github.com/AntonioErdeljac)
+Live: [Vercel](https://discordd-vert.vercel.app)
+    : [Rendrer](https://discordd-9bc5.onrender.com)
 
 Features:
 
