@@ -62,13 +62,3 @@ npx prisma migrate dev --name init
 npm run dev
 ```
 
-## Available commands
-
-Running commands with npm `npm run [command]`
-
-| command | description                              |
-| :------ | :--------------------------------------- |
-| `dev`   | Starts a development instance of the app |
-| `lint`  | Run lint check                           |
-| `build` | Start building app for deployment        |
-| `start` | Run build version of app                 |
